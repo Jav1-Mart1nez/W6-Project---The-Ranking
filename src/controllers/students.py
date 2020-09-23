@@ -4,8 +4,8 @@ from src.helpers.json_response import json_response
 import re
 from src.database import db
 
-@app.route("/student/create/<studentname>")
-def searchStudent():
+@app.route("/student/all")
+def searchStudents():
     studentNameQuery = request.args.get("name")
     if not studentNameQuery:
         # Set status code to 400 BAD REQUEST
@@ -15,10 +15,9 @@ def searchStudent():
         }, 400
 
     # Search a company in mongodb database
-    projection = {"name": 1, "category_code": 1,"description":1}
+    projection = {"student_id": 1, "student_name": 1}
     searchRE = re.compile(f"{studentNameQuery}", re.IGNORECASE)
-    foundStudent = db["crunchbase"].find_one(
-        {"name": searchRE}, projection)
+    foundStudent = db["students"].find_one({"name": searchRE}, projection)
 
     if not foundStudent:
         # Set status code to 404 NOT FOUND
@@ -30,6 +29,6 @@ def searchStudent():
     data = {
         "status": "OK",
         "searchQuery": studentNameQuery,
-        "student": foundStudent
+        "company": foundStudent
     }
     return json_response(data)
