@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 .env
 API def..ipynb
+.DS_Store
