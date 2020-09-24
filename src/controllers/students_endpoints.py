@@ -20,7 +20,9 @@ def createStudent(studentname):
 
     data = {"student_name": studentname}
     newStudent = db.students.insert_one(data)
-    return f"User {studentname} has been created into students data base"
+    return {"status": "ok",
+        "data": f"User {studentname} has been created into students data base"
+    }
 
 
 

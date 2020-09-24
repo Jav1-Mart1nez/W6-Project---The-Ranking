@@ -4,17 +4,27 @@ from src.helpers.json_response import json_response
 from src.database import db
 from bson.json_util import dumps
 
-
+@app.route("/lab/create/", defaults = {"lab_name": None})
 @app.route("/lab/create/<lab_name>")
 def createlab(lab_name):
 
     """Al introducir el endpoint arriba indicado, la función se encarga de crear un nuevo lab dentro de la students db."""
-   
+    
+    # Set status code to 400 BAD REQUEST
+    if lab_name == None:
+        return {
+            "status": "Error HTTP 400 (Bad Request)",
+            "message": "Empty lab name, please specify one"
+        }
+
     # New data lab.
     data = {"pull_name": lab_name}
     newlab = db.students.insert_one(data)
   
-    return f"The lab {labname} has been created into students data base"
+    return {
+        "status": "ok",
+        "data": f"The lab {lab_name} has been created into students data base"
+    }
 
 
 
