@@ -1,7 +1,6 @@
 from src.app import app
-import src.controllers.create_student
-import src.controllers.find_students
-import src.controllers.lab_create
+import src.controllers.students_endpoints
+import src.controllers.labs_endpoints
 from config import PORT
 
 app.run("0.0.0.0", PORT, debug=True)
