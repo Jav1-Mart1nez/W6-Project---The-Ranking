@@ -90,10 +90,6 @@ en el espacio reservado <lab_name> debemos introducir el nombre del lab que quer
 
 ![Captura%20de%20pantalla%202020-09-25%20a%20las%200.36.24.png](https://github.com/Jav1-Mart1nez/W6-Project---The-Ranking/blob/master/img/lab-analysis/Captura%20de%20pantalla%202020-09-25%20a%20las%200.36.24.png)
 
-Si por error se introduce un lab que no existe dentro de la base de datos, la api nos devuelve el siguiente mensaje.
-
-![lab_not_found](https://github.com/Jav1-Mart1nez/W6-Project---The-Ranking/blob/master/img/lab-analysis/lab_not_found.png)
-
 
 ### Obtener meme aleatorio de un determinado lab.
 

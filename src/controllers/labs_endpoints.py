@@ -3,6 +3,7 @@ from flask import request, Response
 from src.helpers.json_response import json_response
 from src.database import db
 from bson.json_util import dumps
+import re
 
 @app.route("/lab/create/", defaults = {"lab_name": None})
 @app.route("/lab/create/<lab_name>")
@@ -31,14 +32,6 @@ def createlab(lab_name):
 def lab_analysis(lab_name):
 
     """Al introducir el endpoint arriba indicado, la función devuelve un diccionario con un análisis estadístico de las pull request."""
-    
-    # Set status code to 400 BAD REQUEST
-    if lab_name != db.students.find({"pull_name": lab_name}):
-        return {
-            "status": "Error HTTP 404 (Not found)",
-            "message": "the lab does not exist in database, please specify an existing lab"
-        }
-
 
     # Number of open PR.
     opened = db.students.find({"$and": [{"pull_state": "open"},{"pull_name": lab_name}]}).count()
@@ -94,7 +87,6 @@ def memeranging():
 )
     #memeranging = db.students.aggregate({"$group": {"_id" : "$meme", "count" : {"$sum" : 1}}}).result
     return dumps(list(memeranging))"""
-
 
 
 @app.route("/lab/<lab_name>/meme")
