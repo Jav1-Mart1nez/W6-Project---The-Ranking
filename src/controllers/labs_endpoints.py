@@ -53,7 +53,7 @@ def lab_analysis(lab_name):
 
     # Grade for each PR.
     gra_projections = {"student_user": 1, "grade": 1}
-    grade = db.students.find(({"$and": [{"grade": {"$ne": None}},{"pull_name": lab_name}]}), gra_projections)
+    grade = db.students.find(({"$and": [{"grade": {"$ne": None}},{"pull_name": lab_name}]}), gra_projections).sort("grade")
     grade = dumps(list(grade))
 
     # No conseguí sacar la diferencia de tiempos.
@@ -75,18 +75,13 @@ def lab_analysis(lab_name):
     return Analysis
 
 
-# No conseguí sacar el memeranking
-"""@app.route("/lab/memeranking")
-def memeranging():
+@app.route("/lab/memeranking")
+def memeranking():
 
-    memeranging = db.students.aggregate(
-       {"$match": {"meme" :{ "$ne" : None } } }, 
-       {"$group" : {"_id": "$meme", "count": { "$sum": 1 } } },
-       {"$match": {"count" : {"$gt": 1} } }, 
-       {"$project": {"meme" : "$_id", "_id" : 0} }
-)
-    #memeranging = db.students.aggregate({"$group": {"_id" : "$meme", "count" : {"$sum" : 1}}}).result
-    return dumps(list(memeranging))"""
+    """Al introducir el endpoint arriba indicado, la función devuelve un ranking de memes utilizados en orden descendiente."""
+
+    memeranking = db.students.aggregate([{"$group": {"_id": "$meme", "count": {"$sum": 1}}}, {"$sort": {"count": -1}}])
+    return dumps(list(memeranking))
 
 
 @app.route("/lab/<lab_name>/meme")

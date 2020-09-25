@@ -34,3 +34,4 @@ def searchStudent():
     
     query = db.students.distinct("student_user", {"$and": [{"student_user": {"$exists": True}},{"student_user": {"$ne": None}}]})
     return dumps(list(query))
+

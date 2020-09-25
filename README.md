@@ -30,7 +30,7 @@ Se ha creado un api que se encarga de realizar las siguientes acciones:
 
 ### Creación de un nuevo estudiante.
 
-Para crear un nuevo estudiante se debe introducir la siguiente ruta:
+Para crear un nuevo estudiante se debe introducir el siguiente url:
 
     - http://localhost:3000/student/create/<studentname>
 
@@ -47,7 +47,7 @@ Si hemos introducido con éxito el nuevo estudiante, nuestra api se encargará d
 
 ### Consultar todos los estudiantes que han realizado pull requests a lo largo del presente bootcamp.
 
-Para realizar esta consulta debemos introducir la siguiente ruta:
+Para realizar esta consulta debemos introducir el siguiente url:
 
     - http://localhost:3000/student/all
 
@@ -58,7 +58,7 @@ Nuestra api se encargará de devolvernos una lista con todos los estudiantes.
 
 ### Creación de un nuevo lab.
 
-Para crear un nuevo lab se debe introducir la siguiente ruta:
+Para crear un nuevo lab se debe introducir el siguiente url:
 
     - http://localhost:3000/lab/create/<lab_name>
 
@@ -75,7 +75,7 @@ Si hemos introducido con éxito el nuevo lab, nuestra api se encargará de devol
 
 ### Análisis estadístico de un determinado lab.
 
-Para consultar las estadísticas de un determinado lab se debe introducir la siguiente ruta:
+Para consultar las estadísticas de un determinado lab se debe introducir el siguiente url:
 
     - http://localhost:3000/lab/<lab_name>/search
 
@@ -88,12 +88,23 @@ en el espacio reservado <lab_name> debemos introducir el nombre del lab que quer
     5) Lista de memes en cada pull request.
     6) Notas de cada estudiante en cada pull request.
 
-![Captura%20de%20pantalla%202020-09-25%20a%20las%200.36.24.png](https://github.com/Jav1-Mart1nez/W6-Project---The-Ranking/blob/master/img/lab-analysis/Captura%20de%20pantalla%202020-09-25%20a%20las%200.36.24.png)
+![lab-analysis.png](https://github.com/Jav1-Mart1nez/W6-Project---The-Ranking/blob/master/img/lab-analysis/lab-analysis.png)
+
+
+### Ranking de memes utilizados a lo largo del bootcamp.
+
+Para obtener el ranking memes utilizados en el bootcamp hasta la fecha, debemos introducir el siguiente url:
+
+    - http://localhost:3000//lab/memeranking
+
+Nuestra api se encargará de devolvernos una lista con el ranking de memes más utilizados en orden descendiente.
+
+![Cranking-meme.png](https://github.com/Jav1-Mart1nez/W6-Project---The-Ranking/blob/master/img/ranking-meme/ranking-meme.png)
 
 
 ### Obtener meme aleatorio de un determinado lab.
 
-Para obtener el enlace a un meme de un determinado lab se debe introducir la siguiente ruta:
+Para obtener el enlace de un meme aleatorio de un determinado lab se debe introducir el siguiente url:
 
     - http://localhost:3000/lab/<lab_name>/meme
     
