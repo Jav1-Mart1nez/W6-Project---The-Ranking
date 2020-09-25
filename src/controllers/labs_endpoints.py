@@ -27,12 +27,19 @@ def createlab(lab_name):
     }
 
 
-
 @app.route("/lab/<lab_name>/search")
 def lab_analysis(lab_name):
 
     """Al introducir el endpoint arriba indicado, la función devuelve un diccionario con un análisis estadístico de las pull request."""
     
+    # Set status code to 400 BAD REQUEST
+    if lab_name != db.students.find({"pull_name": lab_name}):
+        return {
+            "status": "Error HTTP 404 (Not found)",
+            "message": "the lab does not exist in database, please specify an existing lab"
+        }
+
+
     # Number of open PR.
     opened = db.students.find({"$and": [{"pull_state": "open"},{"pull_name": lab_name}]}).count()
     

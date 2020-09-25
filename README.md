@@ -2,7 +2,7 @@
 Weekly project "The Ranking"
 
 
-![ironhack.jpeg](https://github.com/Jav1-Mart1nez/W6-Project---The-Ranking/blob/master/img/ironhack.jpeg)
+![welcome.png](https://github.com/Jav1-Mart1nez/W6-Project---The-Ranking/blob/master/img/welcome/welcome.png)
 
 
 El objetivo de este proyecto es crear un api que se nutra de una base de datos con la información de las pull request realizadas hasta la fecha. Esta base de datos ha sido obtenida de Github a través de su propia apikey.  
@@ -89,6 +89,10 @@ en el espacio reservado <lab_name> debemos introducir el nombre del lab que quer
     6) Notas de cada estudiante en cada pull request.
 
 ![Captura%20de%20pantalla%202020-09-25%20a%20las%200.36.24.png](https://github.com/Jav1-Mart1nez/W6-Project---The-Ranking/blob/master/img/lab-analysis/Captura%20de%20pantalla%202020-09-25%20a%20las%200.36.24.png)
+
+Si por error se introduce un lab que no existe dentro de la base de datos, la api nos devuelve el siguiente mensaje.
+
+![lab_not_found](https://github.com/Jav1-Mart1nez/W6-Project---The-Ranking/blob/master/img/lab-create/lab_not_found.png)
 
 
 ### Obtener meme aleatorio de un determinado lab.
