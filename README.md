@@ -92,7 +92,7 @@ en el espacio reservado <lab_name> debemos introducir el nombre del lab que quer
 
 Si por error se introduce un lab que no existe dentro de la base de datos, la api nos devuelve el siguiente mensaje.
 
-![lab_not_found](https://github.com/Jav1-Mart1nez/W6-Project---The-Ranking/blob/master/img/lab-create/lab_not_found.png)
+![lab_not_found](https://github.com/Jav1-Mart1nez/W6-Project---The-Ranking/blob/master/img/lab-analysis/lab_not_found.png)
 
 
 ### Obtener meme aleatorio de un determinado lab.
