@@ -36,7 +36,7 @@ Para crear un nuevo estudiante se debe introducir la siguiente ruta:
 
 en el espacio reservado <studentname> debemos introducir el nombre del estudiante que queremos incluir en nuestra base de datos. En caso de que no se incluya ningún alumno, nuestra api nos devolverá la siguiente pantalla.
 
-/Users/Javi/Desktop/carpeta sin título/student-create/Captura de pantalla 2020-09-25 a las 0.38.41.png
+![Alt text](img/student-create/Captura de pantalla 2020-09-25 a las 0.38.41.png?raw=true)
 
 Si hemos introducido con éxito el nuevo estudiante, nuestra api se encargará de devolvernos la siguiente pantalla y generar el estudiante dentro de la base de datos.
     
