@@ -2,7 +2,7 @@
 Weekly project "The Ranking"
 
 
-![ironhack.jpg](https://github.com/Jav1-Mart1nez/W6-Project---The-Ranking/blob/master/img/student-create/ironhack.jpg)
+![ironhack.jpg](https://github.com/Jav1-Mart1nez/W6-Project---The-Ranking/blob/master/img/ironhack.jpg)
 
 
 El objetivo de este proyecto es crear un api que se nutra de una base de datos con la información de las pull request realizadas hasta la fecha. Esta base de datos ha sido obtenida de Github a través de su propia apikey.  
